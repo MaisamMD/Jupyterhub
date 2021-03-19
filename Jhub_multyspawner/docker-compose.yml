@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  jhub:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jhub_ssl:1.0
+    container_name: jhub_muspawner
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+    networks:
+      - jhubmus
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py"
+      - "./ssl:/srv/jupyterhub/ssl"
+networks:
+  jhubmus:
+    name: jhubmus
