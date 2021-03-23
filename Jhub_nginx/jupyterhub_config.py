@@ -13,7 +13,7 @@ c.JupyterHub.bind_url = 'http://jhub:8000'
 c.JupyterHub.spawner_class = 'dockerspawner.DockerSpawner'
 c.DockerSpawner.image = 'jupyter/scipy-notebook:latest'
 
-#Add a directory from your host to be mapped to the spawned container. 
+#Add a directory from your host to be mapped to the spawned container.
 #c.DockerSpawner.volumes = {'/An/Absolute/Path/To/A Directory/In/Your host':'/home/jovyan/work'}
 
 # tell the user containers to connect to the defined docker network in the docker-compose file

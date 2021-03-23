@@ -24,5 +24,5 @@ c.DockerSpawner.network_name = 'jhubssl'
 # delete containers when the stop
 c.DockerSpawner.remove = True
 #*********** ssl key and cert
-c.JupyterHub.ssl_cert = '/srv/jupyterhub/ssl/yourcert.crt'
-c.JupyterHub.ssl_key = '/srv/jupyterhub/ssl/yourkey.key'
+c.JupyterHub.ssl_cert = '/srv/jupyterhub/ssl/myssl.crt'
+c.JupyterHub.ssl_key = '/srv/jupyterhub/ssl/myssl.key'

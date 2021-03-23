@@ -15,7 +15,7 @@ services:
       - jhubnginx
 
   jhub:
-    image: jhub_ssl:1.0
+    image: jupyterhub:latest
     container_name: jhub_proxy
     ports:
       - 8000:8000

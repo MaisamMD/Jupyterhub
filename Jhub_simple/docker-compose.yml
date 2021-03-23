@@ -2,10 +2,7 @@ version: "3"
 
 services:
   jhub:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: hub:latest
+    image: jupyterhub:latest
     container_name: jupyterhub
     ports:
       - 8000:8000
@@ -13,7 +10,6 @@ services:
       - jupyterhub
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
-#      - "~/data:/home"
 networks:
   jupyterhub:
     name: jupyterhub
